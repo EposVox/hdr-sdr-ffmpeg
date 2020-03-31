@@ -1,0 +1,1 @@
+ffmpeg -hwaccel auto -threads 16 -i "%~1" -vf "zscale=transfer=linear,tonemap=hable,zscale=transfer=bt709,format=yuv420p" -c:v prores -profile:v 3 -c:a copy "%~dnp1_tonemapped.mov"
